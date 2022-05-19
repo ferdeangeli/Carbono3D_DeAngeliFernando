@@ -23,6 +23,7 @@ img{
 
 .cabecera{
     grid-area: header;
+    z-index: 10;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr;
@@ -115,7 +116,7 @@ h1{
     padding-top: 0.5rem;
     font-family: 'Roboto', sans-serif; color: rgb(255, 255, 255);
     border-bottom: solid 3px #2d7552cb;
-    background-image: linear-gradient(to bottom, #2d7552cb,rgb(71, 71, 71));
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
 }
 
 .productos{
@@ -142,7 +143,7 @@ h1{
     font-family: 'Roboto', sans-serif; color: white;
     font-weight: 400;
     border-bottom: solid 2px #2d7552cb;
-    background-image: linear-gradient(to right, #2d7552cb,rgb(71, 71, 71));
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -195,7 +196,7 @@ h1{
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, #2d7552cb,rgb(71, 71, 71));
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
 }
 
 .pieLogo{
