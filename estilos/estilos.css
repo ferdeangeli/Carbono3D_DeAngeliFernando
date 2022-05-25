@@ -96,7 +96,6 @@ main{
 
 
 h1{
-    text-align: center;
     height: 7vh;
     vertical-align: middle;
     padding-top: 1%;
@@ -227,6 +226,9 @@ h4{
     padding: 2%;
 }
 
+.tituloImpresoras{
+    text-align: center;
+}
 
 .contenedorTarjetas{
     height: 80%;
@@ -261,7 +263,7 @@ h4{
 }
 
 .mapa{
-    width: 500px;
+    width: 400px;
     height: 300px;
     padding-bottom: 2%;
     border: solid; color: black;
@@ -270,4 +272,60 @@ h4{
 
 .tituloMapa{
     text-align: center;
+}
+
+/* Estilos Filamentos */
+
+
+.portadaFila{
+    width: 100%;
+    height: auto;
+    filter: opacity(60%);
+}
+
+.imagenColor{
+    height: 150px;
+    width: 150px;
+}
+
+.contenedorTarjetasColores{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1%;
+}
+
+.botonDesplegable{
+    background-color:#2d7552cb ;
+    text-decoration: solid; color: black;
+}
+
+.botonAgregarCarrito{
+    background-color: gray;
+    font-weight: 500;color: white;
+}
+
+.masInfoFila{
+    padding-top: 0;
+    padding-bottom: 1%;
+}
+
+.indiceFila{
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
+    font-weight: 400; color: white;
+    padding: 0%;
+}
+
+.indiceFila h2{
+    padding: 0%;
+}
+
+.indiceFila a{
+    font-weight: 400; color: white;
+    font-size: 20px;
+}
+
+.especFila{
+    border-bottom: solid 2px; color: black;
 }
