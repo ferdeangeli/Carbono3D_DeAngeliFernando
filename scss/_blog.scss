@@ -1,0 +1,39 @@
+.tituloBlog{
+    color: white;
+    text-align: center;
+}
+
+.indiceBlog{
+    /* background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd); */
+    font-weight: 400; color: white;
+    padding: 0%;
+    text-align: center;
+    h2{
+        padding: 0%;
+        text-align: center;
+    }
+    
+    a{
+        font-weight: 400; color: white;
+        font-size: 20px;
+        transition: all 0.3s;
+        display: block;
+    }
+
+    a:hover{
+        font-size: 22px;
+    }
+}
+
+
+.articuloBlog{
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 2%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+

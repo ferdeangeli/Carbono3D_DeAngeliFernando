@@ -1,0 +1,49 @@
+.tituloContacto{
+    text-align: center;
+    color: white;
+}
+
+.contenedorMapas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mapa{
+    width: 600px;
+    height: 400px;
+    padding-bottom: 2%;
+    border: none;
+    border-radius: 2%;
+}
+
+@media screen and (max-width: 650px){
+    .mapa{
+        width:450px ;
+        height: 300px;
+    }
+}
+
+
+.tituloMapa{
+    text-align: center;
+}
+
+.formularioContacto{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        text-align: center;
+    }
+
+    form{
+        border: solid 1px white;
+        padding: 1%;
+    }
+}

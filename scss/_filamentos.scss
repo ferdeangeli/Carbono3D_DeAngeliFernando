@@ -1,0 +1,122 @@
+.tituloFila{
+    h1{
+        color: white;
+        text-align: center;
+    }
+
+    img{
+        height: 75px;
+        width: auto;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.fila1{
+    animation: float 2s ease-in-out infinite;
+}
+
+.fila2{
+    animation: float 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.fila3{
+    animation: float 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.contenedorTarjetasColores{
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1%;
+}
+
+.card-title{
+    font-size: 16px;
+}
+
+.botonAgregarCarrito{
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;color: white;
+    border: solid 2 px black;
+    width: auto;
+}
+
+
+.indiceFila{
+    /* background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd); */
+    font-weight: 400; color: white;
+    padding: 0%;
+    h2{
+        padding: 0%;
+        text-align: center;
+    }
+
+    a{
+        display: block;
+        text-align: center;
+        font-weight: 400; color: white;
+        font-size: 20px;
+        transition: all 0.3s;
+        
+        &:hover{
+            font-size: 22px;
+        }
+    }
+    
+       
+
+    ol{
+        list-style: none;
+        text-align: center;
+    }
+}
+
+
+
+.especFila{
+    border: solid 2px; color: black;
+    border-radius: 5px;
+    padding: 2%;
+    background-color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+
+.formFila{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
+    select{
+        width: 180px;
+    }
+    
+    input {
+        width: 120px;
+    }
+}
+
+
+

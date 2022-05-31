@@ -1,0 +1,53 @@
+.tituloImpresoras{
+    text-align: center;
+    color: white;
+}
+
+.contenedorTarjetas{
+    height: 80%;
+}
+
+
+
+.contenedorTarjetasImpresoras{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .p-3{
+        border: none;
+    }
+
+    .p-3:hover{
+        animation: bordeBrillante 1.5s ease-in-out infinite;
+    }
+
+    .card:hover{
+        transform: perspective(700px);
+        transform-origin: center center -30px;
+    }
+}
+
+@keyframes bordeBrillante{
+    0%{
+        border: solid 3px white;
+    }
+    50%{
+        border: solid 3px black;
+    }
+    100%{
+        border: solid 3px white;
+    }
+}
+
+.card-img-top{
+    height: 300px;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px){
+    .tarjetaProducto img{
+        height: 300px;
+    }
+}

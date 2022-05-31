@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+img{
+    height: 30px;
+}
+
+/* Estilos header */
+
+
+.cabecera{
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 15%;
+    position: sticky;
+    background-color: rgba(255, 255, 255);
+}
+
+.cabeceraSuperior{
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+
+
+.cabeceraInferior{
+    border-bottom: solid 3px #2d7552cb;
+    border-top: solid 1px #2d7552cb;
+    justify-content: space-evenly;
+    padding: 0.5em;
+}
+
+.cabeceraInferior img{
+    vertical-align: middle;
+}
+
+.cabeceraInferior a{
+    font-family: 'Roboto', sans-serif; color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cabeceraInferiorUbicacion{
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+.cabeceraInferiorRedes{
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+
+/* Estilos MAIN */
+
+main{
+    padding: 1%;
+    justify-content: center;
+}
+
+.wapp{
+    position: fixed;
+    z-index: 10;
+    bottom: 30px;
+    right: 30px;
+    text-align: left;
+}
+
+.wapp img{
+    width: 65px;
+    height: auto;
+}
+
+.tituloPortada{
+    /* background-color: rgb(42, 42, 42,0.4); */
+    background: rgb(158,195,168);
+    background: linear-gradient(90deg, rgba(158,195,168,0.5) 0%, rgba(75,103,80,0.5) 30%, rgba(111,147,120,0.5) 75%);
+    border: solid 1px black;
+    border-radius: 50px;
+}
+
+
+h1{
+    height: 7vh;
+    vertical-align: middle;
+    padding-top: 1%;
+    font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0);
+    font-weight: 800;
+}
+
+
+.productos{
+    display: flex;
+    height: 75%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productos img{
+    height: 500px;
+    transition: all 0.2s;
+}
+
+.productos img:hover {
+    border-bottom: solid 5px black ;
+}
+
+.pagoyenvios{
+    padding: 1%;
+    font-family: 'Roboto', sans-serif; color: white;
+    font-weight: 400;
+    border-bottom: solid 2px #2d7552cb;
+    border-top: solid 2px #2d7552cb;
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
+}
+
+.pagoyenviosPago{
+    height: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+.pagoyenviosEnvios{
+    height: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+#imagenpago{
+    height: 3em;
+    width: auto;
+    vertical-align: middle;
+}
+
+#imagenenvios{
+    height: 3em;
+    width: auto;
+    vertical-align: middle;
+}
+
+.tituloOfertas{
+    display: block;
+    text-align: center;
+}
+
+.principalesOfertas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* Estilos Footer */
+
+.pie{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 1%;
+    font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0);
+    font-weight: 400;
+    border-top: solid 2px #2d7552cb;
+}
+
+.pieLogo{
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+
+.pieLinksIzq{
+    text-align: right;
+    font-family: 'Roboto', sans-serif, sans-serif;color: rgb(0, 0, 0);
+    font-weight: 400;
+    padding: 0.3em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.pieLinksIzq a{
+    text-align: right;
+    font-family: 'Roboto', sans-serif, sans-serif;color: rgb(0, 0, 0);
+    font-weight: 400;
+    padding: 0.3em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.pieLinksDer{
+    text-align: left;
+    font-family: 'Roboto', sans-serif, sans-serif;color: rgb(0, 0, 0);
+    font-weight: 400;
+    padding: 0.3em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.pieLinksDer a{
+    text-align: left;
+    font-family: 'Roboto', sans-serif, sans-serif;color: rgb(0, 0, 0);
+    font-weight: 400;
+    padding: 0.3em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.pieLinksIzq img{
+    height: 20px;
+    vertical-align: middle;
+}
+
+.pieLinksDer img{
+    height: 20px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px){
+    h1{
+        font-size: 22px;
+    }
+
+}
+
+
+/* Estilos PAGINA IMPRESORAS Y FILAMENTOS */
+
+h2{
+    font-family: 'Roboto', sans-serif, sans-serif;
+    text-align: left;
+    padding-top: 2%;
+}
+
+h4{
+    font-family: 'Roboto', sans-serif, sans-serif; color: rgb(252, 74, 74);
+    font-size: 35px;
+    text-align: center;
+    padding: 2%;
+}
+
+.tituloImpresoras{
+    text-align: center;
+}
+
+.contenedorTarjetas{
+    height: 80%;
+}
+
+.contenedorTarjetasImpresoras{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.card-img-top{
+    height: 300px;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px){
+    .tarjetaProducto img{
+        height: 300px;
+    }
+}
+
+/* Estilos CONTACTOS */
+
+.contenedorMapas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mapa{
+    width: 400px;
+    height: 300px;
+    padding-bottom: 2%;
+    border: solid; color: black;
+    border-radius: 2%;
+}
+
+.tituloMapa{
+    text-align: center;
+}
+
+/* Estilos Filamentos */
+
+
+.contenedorTarjetasColores{
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1%;
+}
+
+
+
+.botonAgregarCarrito{
+    background-color: rgb(148, 148, 148);
+    font-weight: 500;color: white;
+    width: auto;
+}
+
+
+.indiceFila{
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
+    font-weight: 400; color: white;
+    padding: 0%;
+}
+
+.indiceFila h2{
+    padding: 0%;
+}
+
+.indiceFila a{
+    font-weight: 400; color: white;
+    font-size: 20px;
+}
+
+.especFila{
+    border-bottom: solid 2px; color: black;
+}
+
+
+.formFila{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.formFila select{
+    width: 180px;
+}
+
+.formFila input {
+    width: 120px;
+}
+
+
+/* Estilos Blog */
+
+.indiceBlog{
+    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
+    font-weight: 400; color: white;
+    padding: 0%;
+}
+
+.indiceBlog h2{
+    padding: 0%;
+}
+
+.indiceBlog a{
+    font-weight: 400; color: white;
+    font-size: 20px;
+}
