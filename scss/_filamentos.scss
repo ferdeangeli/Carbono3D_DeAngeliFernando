@@ -1,4 +1,10 @@
+@import "_variables.scss";
+
+
 .tituloFila{
+    padding-left: 15%;
+    padding-right: 15%;
+
     h1{
         color: white;
         text-align: center;
@@ -20,12 +26,12 @@
 }
 
 .fila2{
-    animation: float 2s ease-in-out infinite;
+    @extend .fila1;
     animation-delay: 0.5s;
 }
 
 .fila3{
-    animation: float 2s ease-in-out infinite;
+    @extend .fila1;
     animation-delay: 1s;
 }
 
@@ -41,6 +47,10 @@
     }
 }
 
+
+.introFila{
+    font-weight: map-get($map: $letraDestacada, $key: pesoLetra)
+}
 
 .contenedorTarjetasColores{
     display: flex;  
@@ -63,7 +73,6 @@
 
 
 .indiceFila{
-    /* background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd); */
     font-weight: 400; color: white;
     padding: 0%;
     h2{
@@ -82,6 +91,13 @@
             font-size: 22px;
         }
     }
+
+    @each $material, $color in $colorFila{
+        .a--#{$material}{
+            color:$color;
+        }
+    }
+    
     
        
 

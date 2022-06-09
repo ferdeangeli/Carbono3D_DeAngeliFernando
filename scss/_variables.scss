@@ -1,0 +1,15 @@
+$colorFila:(
+    PLA: #ff0000,
+    PETG: #5676ea,
+    SIMPLIFLEX: #cbdd62
+);
+
+@mixin tamaño($width, $height){
+    width: $width;
+    height: $height;
+}
+
+$letraDestacada: (
+    color: white,
+    pesoLetra: 600,
+);

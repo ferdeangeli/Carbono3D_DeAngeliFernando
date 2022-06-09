@@ -1,0 +1,4 @@
+Se pone titulo a cada pagina
+Se agregan palabras clave en cada pagina del sitio, especificas para el contenido de cada pagina.
+Se agregan descripciones a cada pagina
+Todas las paginas se encuentran enlazadas entre si. Tambien hay informacion completa en cada tema y se ofrecen enlaces externos para mayor detalle.

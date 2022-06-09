@@ -258,27 +258,26 @@ h1 {
     border: solid 1px white;
     padding: 1%; }
 
-.tituloFila h1 {
-  color: white;
-  text-align: center; }
+.tituloFila {
+  padding-left: 15%;
+  padding-right: 15%; }
+  .tituloFila h1 {
+    color: white;
+    text-align: center; }
+  .tituloFila img {
+    height: 75px;
+    width: auto; }
+  .tituloFila div {
+    display: flex;
+    justify-content: center; }
 
-.tituloFila img {
-  height: 75px;
-  width: auto; }
-
-.tituloFila div {
-  display: flex;
-  justify-content: center; }
-
-.fila1 {
+.fila1, .fila2, .fila3 {
   animation: float 2s ease-in-out infinite; }
 
 .fila2 {
-  animation: float 2s ease-in-out infinite;
   animation-delay: 0.5s; }
 
 .fila3 {
-  animation: float 2s ease-in-out infinite;
   animation-delay: 1s; }
 
 @keyframes float {
@@ -288,6 +287,9 @@ h1 {
     transform: translateY(-20px); }
   100% {
     transform: translateY(0); } }
+
+.introFila {
+  font-weight: 600; }
 
 .contenedorTarjetasColores {
   display: flex;
@@ -307,7 +309,6 @@ h1 {
   width: auto; }
 
 .indiceFila {
-  /* background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd); */
   font-weight: 400;
   color: white;
   padding: 0%; }
@@ -323,6 +324,12 @@ h1 {
     transition: all 0.3s; }
     .indiceFila a:hover {
       font-size: 22px; }
+  .indiceFila .a--PLA {
+    color: #ff0000; }
+  .indiceFila .a--PETG {
+    color: #5676ea; }
+  .indiceFila .a--SIMPLIFLEX {
+    color: #cbdd62; }
   .indiceFila ol {
     list-style: none;
     text-align: center; }
