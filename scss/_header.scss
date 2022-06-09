@@ -9,16 +9,38 @@
 .cabeceraSuperior{
     display: flex;
     flex-direction: row;
-    height: 25%;
-    justify-content: flex-end;
-    padding-right: 2rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.cabeceraSuperior1{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;   
+    
+    img{
+        height: 25px;
+    }
 }
 
 
-.cabeceraInferior{
-    border-bottom: solid 3px #2d7552cb;
+.cabeceraSuperior2{
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+
+/* .cabeceraInferior{
+    border-bottom: solid 2px #6CCC9D;
     border-top: solid 1px #2d7552cb;
-    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     padding: 0.5em;
     img{
         vertical-align: middle;
@@ -33,13 +55,30 @@
 
 
 .cabeceraInferiorUbicacion{
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
+    a{
+        img{
+            height: 25px;
+            vertical-align: middle;
+        }
+    }
 }
 
 .cabeceraInferiorRedes{
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
+    a{
+        img{
+            height: 25px;
+            vertical-align: middle;
+        }
+    }
+} */
+
+.navbar{
+    border-bottom: solid 2px #6CCC9D;
+    border-top: solid 1px #2d7552cb;
 }
