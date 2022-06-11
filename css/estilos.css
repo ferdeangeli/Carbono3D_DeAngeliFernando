@@ -289,8 +289,8 @@ h1 {
 
 @media screen and (max-width: 650px) {
   .mapa {
-    width: 450px;
-    height: 300px; } }
+    width: 350px;
+    height: 250px; } }
 
 .tituloMapa {
   text-align: center; }

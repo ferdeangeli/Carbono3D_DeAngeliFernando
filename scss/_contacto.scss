@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 650px){
     .mapa{
-        @include tamaño(450px, 300px);
+        @include tamaño(350px, 250px);
     }
 }
 
