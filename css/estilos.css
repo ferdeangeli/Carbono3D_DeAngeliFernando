@@ -148,18 +148,24 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  /*     .p-3:hover{
-        animation: bordeBrillante 1.5s ease-in-out infinite;
-    } */ }
-  .principalesOfertas .p-1 {
-    border: none;
-    background-color: #959595; }
+  justify-content: space-around; }
+  .principalesOfertas .p-3 {
+    border: none; }
+  .principalesOfertas .p-3:hover {
+    animation: bordeBrillante2 1.5s ease-in-out infinite; }
   .principalesOfertas .card:hover {
     transform: perspective(700px);
     transform-origin: center center -30px;
-    border: double 6px;
+    border: solid 2px;
     color: #6CCC9D; }
+
+@keyframes bordeBrillante2 {
+  0% {
+    border: solid 3px #6CCC9D; }
+  50% {
+    border: solid 3px white; }
+  100% {
+    border: solid 3px #6CCC9D; } }
 
 .precioOferta {
   font-size: 22px;
