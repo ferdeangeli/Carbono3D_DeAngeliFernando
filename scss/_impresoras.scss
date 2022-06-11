@@ -8,7 +8,6 @@
 }
 
 
-
 .contenedorTarjetasImpresoras{
     display: flex;
     flex-direction: row;
@@ -21,6 +20,11 @@
 
     .p-3:hover{
         animation: bordeBrillante 1.5s ease-in-out infinite;
+    }
+
+    .card{
+        font-size: 23px;
+        font-weight: 600;
     }
 
     .card:hover{

@@ -57,17 +57,8 @@
                           <li class="nav-item">
                             <a class="nav-link" href="./paginas/contacto.html">Contacto</a>
                           </li>
-<!--                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </li> -->
+
+
                         </ul>
                         <form class="d-flex" role="search">
                           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -136,38 +127,51 @@
               </button>
             </div>
 
-            <section class="container-fluid">  <!-- imagenes de medio de pago y de envios-->
-              <div class="pagoyenvios row">
-                  <div class="col-lg-6 col-sm-12">
+            <section class="container-fluid p-0">  <!-- imagenes de medio de pago y de envios-->
+              <div class="pagoyenvios">
                     <div class="pagoyenviosPago">
-                      <img id="imagenpago" src="./assets/img/tarjetas.jpg" alt="formas de pago">
-                      <label for="imagenpago" class="animate__animated animate__flash animate__slower animate__infinite">Ahora 12, 18 y 24</label>
+                      <div class="tituloTarjetas">Todas las tarjetas</div>
+                      <div class="imagenTarjetas">
+                        <img src="./assets/img/logo-VISA.png" alt="visa">
+                        <img src="./assets/img/MasterCard_early_1990s_logo.png" alt="mastercard">
+                        <img src="./assets/img/Cabal-logo.png" alt="cabal">
+                        <img src="./assets/img/americanexpress.png" alt="americanexpress">
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6 col-sm-12"> 
+
+                    <div class="pagoyenviosPlanes">
+                      <div class="tituloPlanes">Financiación</div>
+                      <div class="imagenPlanes">
+                        <img src="./assets/img/Ahora 12 sin fondo.png" alt="ahora12">
+                        <img src="./assets/img/Ahora 18 sin fondo.png" alt="ahora18">
+                      </div>
+                    </div>
+
                     <div class="pagoyenviosEnvios">
-                      <img id="imagenenvios" src="./assets/img/envios.png" alt="envios">
-                      <label for="imagenenvios" class="animate__animated animate__flash animate__slower animate__infinite">Envío gratis a todos el país desde $10000</label>
+                      <label for="imagenenvios" class="animate__animated animate__flash animate__slower animate__infinite">Envío GRATIS desde $10.000</label>
+                      <div>
+                        <img src="./assets/img/delivery icon box.png" alt="envios">
+                        <img src="./assets/img/delivery truck.png" alt="deliveryTruck">
+                      </div>
                     </div>
-                  </div>
               </div>
             </section>
             
-            <article>
+            <article class="container-fluid p-0">
               <br>
               <h1 class="tituloOfertas animate__animated animate__tada animate__slower animate__infinite">NO TE PIERDAS ESTAS OFERTAS</h1>
 
               <br>
 
               <div class="principalesOfertas">
-                <div class="p-3">
+                <div class="p-1">
                     <div class="card" style="width: 18rem;">
                         <img src="./assets/img/Ender 3 v2.jpg" class="card-img-top" alt="ender3v2">
                         <div class="card-body">
                         <h5 class="card-title">Ender 3 V2</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                        <li class="precioOferta list-group-item bg-secondary text-light">$53900</li>
+                        <li class="precioOferta list-group-item bg-secondary">$53900</li>
                         </ul>
                         <div class="card-body">
                         <a href="#" class="card-link text-black">CONOCE MÁS</a>
@@ -175,14 +179,14 @@
                     </div>
                 </div>
                 
-                <div class="p-3">
+                <div class="p-1">
                     <div class="card" style="width: 18rem;">
                         <img src="./assets/img/Magna 2 230.png" class="card-img-top" alt="magna2230">
                         <div class="card-body">
                         <h5 class="card-title">Magna 2 230</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                        <li class="precioOferta list-group-item bg-secondary text-light">$53990</li>
+                        <li class="precioOferta list-group-item bg-secondary">$53990</li>
                         </ul>
                         <div class="card-body">
                         <a href="#" class="card-link text-black">CONOCE MÁS</a>
@@ -190,14 +194,14 @@
                     </div>
                 </div>
     
-                <div class="p-3">
+                <div class="p-1">
                     <div class="card" style="width: 18rem;">
                         <img src="./assets/img/magna 2 300.JPG" class="card-img-top" alt="magna2300">
                         <div class="card-body">
                         <h5 class="card-title">Magna 2 300</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                        <li class="precioOferta list-group-item bg-secondary text-light">$73390</li>
+                        <li class="precioOferta list-group-item bg-secondary">$73390</li>
                         </ul>
                         <div class="card-body">
                         <a href="#" class="card-link text-black">CONOCE MÁS</a>

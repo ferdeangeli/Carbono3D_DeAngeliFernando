@@ -1,6 +1,7 @@
 main{
     padding: 1%;
     justify-content: center;
+    z-index: 0;
 }
 
 .wapp{
@@ -32,41 +33,54 @@ h1{
     font-weight: 800;
 }
 
+.carousel{
+    z-index: 0;
+}
 
 .pagoyenvios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     padding: 1%;
     font-family: 'Roboto', sans-serif; color: white;
     font-weight: 400;
-    border-bottom: solid 2px #2d7552cb;
-    border-top: solid 2px #2d7552cb;
-    background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);
+    border-bottom: solid 2px #6CCC9D;
+    border-top: solid 2px #6CCC9D;
+    /* background-color: rgb(110, 109, 109); */
+    background: rgb(112,105,105);
+    background: linear-gradient(180deg, rgba(112,105,105,1) 28%, rgba(149,149,149,1) 85%);
 }
 
 .pagoyenviosPago{
-    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
     padding-left: 1%;
     padding-right: 1%;
     text-align: center;
+    img{
+        height: 40px;
+        @media screen and (max-width: 768px) {
+            height: 28px;
+        }
+    }
+}
+
+.pagoyenviosPlanes{
+    @extend .pagoyenviosPago;
+    img{
+        height: 45px;
+        @media screen and (max-width: 768px) {
+            height: 45px;
+        }
+    }
 }
 
 .pagoyenviosEnvios{
-    height: 10%;
-    padding-left: 1%;
-    padding-right: 1%;
-    text-align: center;
+    @extend .pagoyenviosPago;
 }
 
-#imagenpago{
-    height: 3em;
-    width: auto;
-    vertical-align: middle;
-}
-
-#imagenenvios{
-    height: 3em;
-    width: auto;
-    vertical-align: middle;
-}
 
 .tituloOfertas{
     display: block;
@@ -79,9 +93,10 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
 
-    .p-3{
+    .p-1{
         border: none;
-        background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd);;
+        background-color: rgba(149,149,149,1)
+        /* background-image: linear-gradient(to right, #03cabd, #2fb2aa, #3f9a96, #488381, #4c6c6c, #4c6c6c, #4c6c6c, #4c6c6c, #488381, #3f9a96, #2fb2aa, #03cabd); */;
     }
     
 /*     .p-3:hover{
@@ -92,20 +107,10 @@ h1{
     .card:hover{
         transform: perspective(700px);
         transform-origin: center center -30px;
+        border: double 6px; color: #6CCC9D;
     }
 }
 
-@keyframes bordeRojo{
-    0%{
-        border: solid 5px rgb(216, 2, 2);
-    }
-    50%{
-        border: solid 5px rgb(255, 255, 255);
-    }
-    100%{
-        border: solid 5px rgb(216, 2, 2);
-    }
-}
 
 .precioOferta{
     font-size: 22px;
