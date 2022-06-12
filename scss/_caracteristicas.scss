@@ -1,5 +1,6 @@
 /* @import "_index.scss";
 @import "_filamentos.scss"; */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@100;300;400;500&display=swap');
 
 .caratulaImpresora{
     display: flex;
@@ -47,12 +48,12 @@
     font-size: 25px;
 }
 
-.precioFoto{
+/* .precioFoto{
     @extend .tituloPortada;
     color: white;
     font-size: 30px;
     font-weight: 600;
-}
+} */
 
 .tarjetaPrecio{
     display: flex;
@@ -69,6 +70,7 @@
     align-items: center;
     vertical-align: middle;
     padding: 1%;
+    font-family: "Kdam Thmor Pro", sans-serif;
     h2{
         padding: 0;
     }

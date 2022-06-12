@@ -1,5 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@100;300;400;500&display=swap");
 .cabecera {
   top: 0;
   z-index: 20;
@@ -90,7 +93,7 @@ main {
     width: 65px;
     height: auto; }
 
-.tituloPortada, .precioFoto {
+.tituloPortada {
   background: #9ec3a8;
   background: linear-gradient(90deg, rgba(158, 195, 168, 0.5) 0%, rgba(75, 103, 80, 0.5) 30%, rgba(111, 147, 120, 0.5) 75%);
   border: solid 1px black;
@@ -268,8 +271,6 @@ h1 {
   justify-content: center; }
   .contenedorTarjetasImpresoras .p-3 {
     border: none; }
-  .contenedorTarjetasImpresoras .p-3:hover {
-    /* animation: bordeBrillante 1.5s ease-in-out infinite; */ }
   .contenedorTarjetasImpresoras .card {
     font-size: 23px;
     font-weight: 600; }
@@ -500,11 +501,12 @@ h1 {
   font-weight: 600;
   font-size: 25px; }
 
-.precioFoto {
-  color: white;
-  font-size: 30px;
-  font-weight: 600; }
-
+/* .precioFoto{
+    @extend .tituloPortada;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+} */
 .tarjetaPrecio {
   display: flex;
   flex-wrap: nowrap;
@@ -518,7 +520,8 @@ h1 {
   background-color: black;
   align-items: center;
   vertical-align: middle;
-  padding: 1%; }
+  padding: 1%;
+  font-family: "Kdam Thmor Pro", sans-serif; }
   .precioImpresora h2 {
     padding: 0; }
 
