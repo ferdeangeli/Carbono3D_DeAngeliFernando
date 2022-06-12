@@ -19,7 +19,8 @@
     }
 
     .p-3:hover{
-        animation: bordeBrillante 1.5s ease-in-out infinite;
+        
+        /* animation: bordeBrillante 1.5s ease-in-out infinite; */
     }
 
     .card{
@@ -30,6 +31,13 @@
     .card:hover{
         transform: perspective(700px);
         transform-origin: center center -30px;
+        box-shadow: 0 0 10px #3c3c3c, 0 0 20px #3c3c3c, 0 0 20px #6CCC9D, 0 0 80px #6CCC9D;
+        .card-link{
+            box-shadow: 0 2px 5px #3c3c3c;
+            font-weight: 500;
+            border-radius: 5px;
+            padding: 1%;
+        }
     }
 }
 

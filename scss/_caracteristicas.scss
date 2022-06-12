@@ -1,0 +1,84 @@
+/* @import "_index.scss";
+@import "_filamentos.scss"; */
+
+.caratulaImpresora{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    vertical-align: middle;
+    align-items: center;
+    height: 120px;
+    img{
+        height: 60px;
+    }
+    h1{
+        color: white;
+        padding: 0;
+        margin: 0;
+        align-items: middle;
+    }
+}
+
+.nombreImpresora{
+    width: 40%;
+    justify-content: center;
+    text-align: center;
+}
+
+.logoMarca{
+    width: 40%;
+    text-align: center;
+}
+
+.contenedorCaracteristicas{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.listaCaracteristicas{
+    list-style: url(../assets/img/viñetaflecha.png);
+    line-height: 1.8;
+}
+
+.card-title{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.precioFoto{
+    @extend .tituloPortada;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.tarjetaPrecio{
+    display: flex;
+    flex-wrap: nowrap;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.precioImpresora{
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: black;
+    align-items: center;
+    vertical-align: middle;
+    padding: 1%;
+    h2{
+        padding: 0;
+    }
+}
+
+.videoImpresora{
+    display: flex;
+    justify-content: center;
+    iframe{
+        width: 1000;
+        height: 500;
+    }
+}

@@ -8,6 +8,7 @@
 @import "_filamentos.scss";
 @import "_blog.scss";
 @import "_variables.scss";
+@import "_caracteristicas.scss";
 
 *{
     margin: 0;
@@ -27,7 +28,6 @@ img{
 h2{
     font-family: 'Roboto', sans-serif, sans-serif;
     text-align: left;
-    padding-top: 2%;
 }
 
 h4{

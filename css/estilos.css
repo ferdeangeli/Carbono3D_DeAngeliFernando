@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 .cabecera {
   top: 0;
@@ -89,14 +90,13 @@ main {
     width: 65px;
     height: auto; }
 
-.tituloPortada {
+.tituloPortada, .precioFoto {
   background: #9ec3a8;
   background: linear-gradient(90deg, rgba(158, 195, 168, 0.5) 0%, rgba(75, 103, 80, 0.5) 30%, rgba(111, 147, 120, 0.5) 75%);
   border: solid 1px black;
   border-radius: 50px; }
 
 h1 {
-  height: 7vh;
   vertical-align: middle;
   padding-top: 1%;
   font-family: 'Roboto', sans-serif;
@@ -144,28 +144,51 @@ h1 {
   display: block;
   text-align: center; }
 
+.card-link {
+  text-decoration: none; }
+
 .principalesOfertas {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
   .principalesOfertas .p-3 {
-    border: none; }
-  .principalesOfertas .p-3:hover {
-    animation: bordeBrillante2 1.5s ease-in-out infinite; }
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .principalesOfertas .p-3::before {
+    content: "";
+    background-image: conic-gradient(#6CCC9D 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s  ease-in-out; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
   .principalesOfertas .card:hover {
     transform: perspective(700px);
-    transform-origin: center center -30px;
-    border: solid 2px;
-    color: #6CCC9D; }
+    transform-origin: center center -30px; }
+    .principalesOfertas .card:hover .card-link {
+      box-shadow: 0 2px 5px #3c3c3c;
+      font-weight: 500;
+      border-radius: 5px;
+      padding: 1%; }
 
 @keyframes bordeBrillante2 {
   0% {
-    border: solid 3px #6CCC9D; }
+    border: solid 3px #000000; }
   50% {
     border: solid 3px white; }
   100% {
-    border: solid 3px #6CCC9D; } }
+    border: solid 3px #000000; } }
 
 .precioOferta {
   font-size: 22px;
@@ -246,13 +269,19 @@ h1 {
   .contenedorTarjetasImpresoras .p-3 {
     border: none; }
   .contenedorTarjetasImpresoras .p-3:hover {
-    animation: bordeBrillante 1.5s ease-in-out infinite; }
+    /* animation: bordeBrillante 1.5s ease-in-out infinite; */ }
   .contenedorTarjetasImpresoras .card {
     font-size: 23px;
     font-weight: 600; }
   .contenedorTarjetasImpresoras .card:hover {
     transform: perspective(700px);
-    transform-origin: center center -30px; }
+    transform-origin: center center -30px;
+    box-shadow: 0 0 10px #3c3c3c, 0 0 20px #3c3c3c, 0 0 20px #6CCC9D, 0 0 80px #6CCC9D; }
+    .contenedorTarjetasImpresoras .card:hover .card-link {
+      box-shadow: 0 2px 5px #3c3c3c;
+      font-weight: 500;
+      border-radius: 5px;
+      padding: 1%; }
 
 @keyframes bordeBrillante {
   0% {
@@ -433,6 +462,73 @@ h1 {
   margin-left: 25px;
   margin-right: 25px; }
 
+/* @import "_index.scss";
+@import "_filamentos.scss"; */
+.caratulaImpresora {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  vertical-align: middle;
+  align-items: center;
+  height: 120px; }
+  .caratulaImpresora img {
+    height: 60px; }
+  .caratulaImpresora h1 {
+    color: white;
+    padding: 0;
+    margin: 0;
+    align-items: middle; }
+
+.nombreImpresora {
+  width: 40%;
+  justify-content: center;
+  text-align: center; }
+
+.logoMarca {
+  width: 40%;
+  text-align: center; }
+
+.contenedorCaracteristicas {
+  display: flex;
+  justify-content: center; }
+
+.listaCaracteristicas {
+  list-style: url(../assets/img/viñetaflecha.png);
+  line-height: 1.8; }
+
+.card-title {
+  font-weight: 600;
+  font-size: 25px; }
+
+.precioFoto {
+  color: white;
+  font-size: 30px;
+  font-weight: 600; }
+
+.tarjetaPrecio {
+  display: flex;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between; }
+
+.precioImpresora {
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: black;
+  align-items: center;
+  vertical-align: middle;
+  padding: 1%; }
+  .precioImpresora h2 {
+    padding: 0; }
+
+.videoImpresora {
+  display: flex;
+  justify-content: center; }
+  .videoImpresora iframe {
+    width: 1000;
+    height: 500; }
+
 * {
   margin: 0;
   padding: 0;
@@ -446,8 +542,7 @@ img {
 
 h2 {
   font-family: 'Roboto', sans-serif, sans-serif;
-  text-align: left;
-  padding-top: 2%; }
+  text-align: left; }
 
 h4 {
   font-family: 'Roboto', sans-serif, sans-serif;

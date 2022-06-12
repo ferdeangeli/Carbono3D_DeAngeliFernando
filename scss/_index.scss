@@ -26,7 +26,6 @@ main{
 
 
 h1{
-    height: 7vh;
     vertical-align: middle;
     padding-top: 1%;
     font-family: 'Roboto', sans-serif; color: rgb(0, 0, 0);
@@ -87,38 +86,72 @@ h1{
     text-align: center;
 }
 
+.card-link{
+    text-decoration: none;
+}
+
 .principalesOfertas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 
-    .p-3{
-        border: none;
+
+    .p-3 {
+        box-shadow: 16px 14px 20px #0000008c;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .p-3:hover{
-        animation: bordeBrillante2 1.5s ease-in-out infinite;
+    .p-3::before{
+        content: "";
+        background-image: conic-gradient(
+            #6CCC9D 20deg,
+            transparent 120deg
+        );
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        animation: rotate 2s  ease-in-out;
+    }
+
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
     }
     
-
     .card:hover{
         transform: perspective(700px);
         transform-origin: center center -30px;
-        border: solid 2px; color: #6CCC9D;
+        .card-link{
+            box-shadow: 0 2px 5px #3c3c3c;
+            font-weight: 500;
+            border-radius: 5px;
+            padding: 1%;
+        }
     }
+
 }
+
 
 
 @keyframes bordeBrillante2{
     0%{
-        border: solid 3px #6CCC9D;
+        border: solid 3px #000000;
     }
     50%{
         border: solid 3px white;
     }
     100%{
-        border: solid 3px #6CCC9D;
+        border: solid 3px #000000;
     }
 }
 
