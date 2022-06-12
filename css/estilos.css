@@ -393,6 +393,8 @@ h1 {
   flex-wrap: wrap;
   justify-content: start;
   gap: 1%; }
+  .contenedorTarjetasColores .card-title {
+    font-size: 14px; }
 
 .card-title {
   font-size: 16px; }
