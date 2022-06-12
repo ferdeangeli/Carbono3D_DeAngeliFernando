@@ -414,16 +414,15 @@ h1 {
   .indiceFila a {
     display: block;
     text-align: center;
-    font-weight: 400;
-    color: white;
+    font-weight: 600;
     font-size: 20px;
     transition: all 0.3s; }
     .indiceFila a:hover {
       font-size: 22px; }
   .indiceFila .a--PLA {
-    color: #ff0000; }
+    color: #d31c1c; }
   .indiceFila .a--PETG {
-    color: #5676ea; }
+    color: #2745b0; }
   .indiceFila .a--SIMPLIFLEX {
     color: #cbdd62; }
   .indiceFila ol {
