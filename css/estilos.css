@@ -526,7 +526,7 @@ h1 {
 } */
 .tarjetaPrecio {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   vertical-align: middle;
   align-items: center;
   justify-content: space-between; }
