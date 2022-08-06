@@ -13,4 +13,16 @@ class Compra{
         let subtotal
         subtotal = this.cantidad * this.precio
     }
+
+    agregarListaCompras(){
+        listaCompras.push(new Compra(this.codigo, this.descripcion, this.cantidad, this.precio))
+    } 
+}
+
+let botonComprar = document.querySelector("#botonComprar")
+
+botonComprar.addEventListener("click", rtaBotonComprar)
+function rtaBotonComprar(e){
+    console.log("compraste")
+    e.preventDefault()
 }
