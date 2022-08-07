@@ -25,7 +25,7 @@ function nuevoCodigo(){
 }
 
 
-for (i=0; i<2; i++){
+for (let i=0; i<2; i++){
     nuevoCodigo()
     const codigo = nuevoCod
     const descripcion = prompt("ingrese descripcion del producto " + (i+1))

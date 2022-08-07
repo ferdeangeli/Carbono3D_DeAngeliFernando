@@ -1,28 +1,47 @@
 const listaCompras = []
 
-//cuando el usuario seleccione una cantidad diferente a 0 y apriete el boton agregar a carrito, se hace un push a la listaCompras, con el producto, cantidad y precio. 
 
 class Compra{
-    constructor(codigo, descripcion, cantidad, precio){
-        this.codigo = codigo
-        this.descripcion = descripcion
-        this.cantidad = cantidad
+    constructor(descripcion, cantidad, precio, subtotal){
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
         this.precio = precio
-    }
-    subtotal(){
-        let subtotal
-        subtotal = this.cantidad * this.precio
+        this.subtotal = this.cantidad * this.precio
     }
 
     agregarListaCompras(){
-        listaCompras.push(new Compra(this.codigo, this.descripcion, this.cantidad, this.precio))
+        listaCompras.push(new Compra(this.descripcion, this.cantidad, this.precio, this.subtotal))
     } 
 }
 
-let botonComprar = document.querySelector("#botonComprar")
+let cantItems = parseInt(prompt("Ingresar cantidad de items a agregar"))
 
-botonComprar.addEventListener("click", rtaBotonComprar)
-function rtaBotonComprar(e){
-    console.log("compraste")
-    e.preventDefault()
+for (let i=0; i<cantItems; i++){
+    const descripcion = prompt("Ingrese nombre del item " +(i+1));
+    const cantidad = prompt("Ingrese la cantidad deseada del item " +(i+1))
+    const precio = prompt("Ingrese el precio del item " +(i+1))
+    const subtotal = cantidad * precio
+    const compra = new Compra(descripcion, cantidad, precio, subtotal)
+    compra.agregarListaCompras()
 }
+
+console.log(listaCompras)
+
+subtotales = listaCompras.map((el) => el.subtotal)
+
+let total = 0
+
+function totalizar(arr, fn){
+    for (const el of arr){
+        fn(el)
+    }
+}
+
+function sumar(subt){
+    total += subt
+}
+
+totalizar(subtotales, sumar)
+console.log(total)
+
+
