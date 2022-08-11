@@ -2,7 +2,7 @@ const listaProductos = []
 
 class Producto{
     constructor(codigo, descripcion, color, categoria, precio, stock){
-        this.codigo = codigo;
+        this.codigo = Number(codigo);
         this.descripcion = descripcion;
         this.color = color;
         this.categoria = categoria;
@@ -15,28 +15,38 @@ class Producto{
     }
 }
 
-let ultimoCodigo
-let nuevoCod
 
-function nuevoCodigo(){
-    const codigos = listaProductos.map((el) => el.codigo)
-    ultimoCodigo = Math.max(codigos)
-    nuevoCod = parseInt(ultimoCodigo + 1)
-}
+const botonCrearProducto = document.querySelector("#botonCrearProducto")
+botonCrearProducto.addEventListener("click", crearProducto)
 
+function crearProducto(e){
+    e.preventDefault()
+    const cantidadProductosInicial = listaProductos.length
+    
+    const codigos = [1]
+    let ultimoCodigo = codigos.sort((a, b) => b - a)
+    console.log(ultimoCodigo)
+    let nuevoCod = Number(parseInt(ultimoCodigo[0]) + 1)
+    codigos.push(nuevoCod)
+    
 
-for (let i=0; i<2; i++){
-    nuevoCodigo()
     const codigo = nuevoCod
-    const descripcion = prompt("ingrese descripcion del producto " + (i+1))
-    const color = prompt("ingrese color del producto " + (i+1))
-    const categoria = prompt("ingrese categoria del producto " + (i+1))
-    const precio = prompt("ingrese precio del producto " + (i+1))
-    const stock = prompt("ingrese stock del producto " + (i+1))
+    const descripcion = String(document.querySelector("#productoDescripcion").value)
+    const color = String(document.querySelector("#productoColor").value)
+    const categoria = String(document.querySelector("#productoCategoria").value)
+    const precio = Number(document.querySelector("#productoPrecio").value)
+    const stock = Number(document.querySelector("#productoStock").value)
     const producto = new Producto (codigo, descripcion, color, categoria, precio, stock)
     producto.agregarListaProductos()
-    console.log(producto)
-    
-}
 
-console.log(listaProductos)
+
+    const cantidadProductossActual = listaProductos.length
+    if (cantidadProductossActual>cantidadProductosInicial){
+        const mensajeProducto = document.querySelector("#mensajeProducto")
+        mensajeProducto.innerText = "Producto creado exitosamente"
+    }else{
+        const mensajeProducto = document.querySelector("#mensajeProducto")
+        mensajeProducto.innerText = "Error. Vuelva a intentarlo"
+    }
+    console.log(listaProductos)
+}

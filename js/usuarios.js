@@ -15,17 +15,29 @@ class Usuario{
     }
 }
 
-let cant = parseInt(prompt("ingresar cantidad de usuarios"))
+const botonRegistro = document.querySelector("#botonRegistro")
+botonRegistro.addEventListener("click", crearUsuario)
 
-for (let i=0; i < cant ; i++){
-    const email = prompt("ingrese email "  + (i+1))
-    const contraseña = prompt("ingrese contraseña "  + (i+1))
-    const nombre = prompt("ingrese nombre "  + (i+1))
-    const apellido = prompt("ingrese apellido "  + (i+1))
-    const dni = prompt("ingrese DNI "  + (i+1))
-    const fechaDeNac = prompt("ingrese fecha de nacimiento "  + (i+1))
+function crearUsuario(e){
+    e.preventDefault()
+    const cantidadUsuariosInicial = listaUsuarios.length
+    const email = document.querySelector("#nuevoEmail").value
+    const contraseña = String(document.querySelector("#nuevoPassword").value)
+    const nombre = document.querySelector("#nuevoNombre").value
+    const apellido = document.querySelector("#nuevoApellido").value
+    const dni = parseInt(document.querySelector("#nuevoDni").value)
+    const fechaDeNac = (document.querySelector("#nuevoFechaDeNac").value)
 
     const usuario = new Usuario (email, contraseña, nombre, apellido, dni, fechaDeNac)
     usuario.agregarListaUsuarios()
+
+    const cantidadUsuariosActual = listaUsuarios.length
+    if (cantidadUsuariosActual>cantidadUsuariosInicial){
+        const mensajeRegistro = document.querySelector("#mensajeRegistro")
+        mensajeRegistro.innerText = "Usuario registrado"
+    }else{
+        const mensajeRegistro = document.querySelector("#mensajeRegistro")
+        mensajeRegistro.innerText = "Error. Vuelva a intentarlo"
+    }
     console.log(listaUsuarios)
 }

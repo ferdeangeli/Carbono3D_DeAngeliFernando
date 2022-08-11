@@ -118,21 +118,26 @@
         </div>
         
           <div class="formularioContacto">
-            <h2>Inicio de sesión</h2>
+            <h2>Maestro de Productos</h2>
 
             <form class="row">
               <div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label pb-1">Ingresá tus datos</label>
-                  <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Email">
+                  <label for="exampleInputEmail1" class="form-label pb-1">Nuevo Producto</label>
+                  <input type="text" class="form-control" id="productoDescripcion" aria-describedby="emailHelp" placeholder="Descripción">
                   <br>
-                  <input type="password" class="form-control" id="loginPassword" aria-describedby="emailHelp" placeholder="Contraseña">
+                  <input type="text" class="form-control" id="productoColor" aria-describedby="emailHelp" placeholder="Color">
+                  <br>
+                  <input type="text" class="form-control" id="productoCategoria" aria-describedby="emailHelp" placeholder="Categoría">
+                  <br>
+                  <input type="number" class="form-control" id="productoPrecio" aria-describedby="emailHelp" placeholder="Precio">
+                  <br>
+                  <input type="number" class="form-control" id="productoStock" aria-describedby="emailHelp" placeholder="Stock">
                 </div>
-                <p id="mensajeLogin"></p>
-                <button id="botonLogin" type="submit" class="btn btn-light">Iniciar sesión</button>
+                <p id="mensajeProducto"></p>
+                <button id="botonCrearProducto" type="submit" class="btn btn-light">Añadir Producto</button>
               </div>
             </form>
-            <div id="emailHelp" class="form-text text-white">¿No tenés cuenta? <a class="linkCrearCuenta" href="./registro.html">CREAR CUENTA</a></div>
           </div>
          
        </section>
@@ -170,7 +175,7 @@
     </div>
   </footer>
 
-<script src="../js/login.js"></script>
+<script src="../js/productos.js"></script>
 
 <!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

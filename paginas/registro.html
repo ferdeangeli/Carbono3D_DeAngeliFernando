@@ -123,18 +123,21 @@
             <form class="row">
               <div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label pb-1">Ingresá tus datos</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                  <label for="nuevoEmail" class="form-label pb-1">Ingresá tus datos</label>
+                  <input type="email" class="form-control" id="nuevoEmail" aria-describedby="emailHelp" placeholder="Email">
                   <br>
-                  <input type="password" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Nombre/s">
+                  <input type="text" class="form-control" id="nuevoNombre" aria-describedby="emailHelp" placeholder="Nombre/s">
                   <br>
-                  <input type="password" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Apellido">
+                  <input type="text" class="form-control" id="nuevoApellido" aria-describedby="emailHelp" placeholder="Apellido">
                   <br>
-                  <input type="password" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Fecha de nacimiento">
+                  <input type="date" class="form-control" id="nuevoFechaDeNac" aria-describedby="emailHelp" placeholder="Fecha de nacimiento">
                   <br>
-                  <input type="password" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp" placeholder="Contraseña">
+                  <input type="number" class="form-control" id="nuevoDni" aria-describedby="emailHelp" placeholder="DNI">
+                  <br>
+                  <input type="password" class="form-control" id="nuevoPassword" aria-describedby="emailHelp" placeholder="Contraseña">
                 </div>
-                <button type="submit" class="btn btn-light">Registrarse</button>
+                <p id="mensajeRegistro"></p>
+                <button id="botonRegistro" type="submit" class="btn btn-light">Registrarse</button>
                 <div id="emailHelp" class="form-text text-white">Los datos ingresados no serán compartidos a terceros</div>
               </div>
             </form>
