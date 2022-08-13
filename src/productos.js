@@ -19,11 +19,13 @@ class Producto{
 const botonCrearProducto = document.querySelector("#botonCrearProducto")
 botonCrearProducto.addEventListener("click", crearProducto)
 
+const codigos = [0]
+
 function crearProducto(e){
     e.preventDefault()
     const cantidadProductosInicial = listaProductos.length
     
-    const codigos = [1]
+    
     let ultimoCodigo = codigos.sort((a, b) => b - a)
     console.log(ultimoCodigo)
     let nuevoCod = Number(parseInt(ultimoCodigo[0]) + 1)

@@ -44,4 +44,3 @@ function sumar(subt){
 totalizar(subtotales, sumar)
 console.log(total)
 
-
