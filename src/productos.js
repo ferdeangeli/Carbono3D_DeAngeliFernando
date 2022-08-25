@@ -43,12 +43,15 @@ function crearProducto(e){
 
 
     const cantidadProductossActual = listaProductos.length
-    if (cantidadProductossActual>cantidadProductosInicial){
-        const mensajeProducto = document.querySelector("#mensajeProducto")
+    const mensajeProducto = document.querySelector("#mensajeProducto")
+    /* if (cantidadProductossActual>cantidadProductosInicial){
         mensajeProducto.innerText = "Producto creado exitosamente"
     }else{
-        const mensajeProducto = document.querySelector("#mensajeProducto")
         mensajeProducto.innerText = "Error. Vuelva a intentarlo"
-    }
+    } */
+
+    cantidadProductossActual>cantidadProductosInicial ? mensajeProducto.innerText = "Producto creado exitosamente" : mensajeProducto.innerText = "Error. Vuelva a intentarlo"
     console.log(listaProductos)
+
 }
+

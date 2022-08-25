@@ -14,29 +14,29 @@ function login(e){
     console.log(passwordIngresado)
     e.preventDefault()
 
-    const checkEmail = datosIngreso.filter((el) => el.email === emailIngresado)
+    const checkEmail = datosIngreso.filter(({email}) => email === emailIngresado)
     if (checkEmail.length != 0){
         console.log(checkEmail)
-        checkPassword = checkEmail.find((el) => el.password === passwordIngresado)
+        checkPassword = checkEmail.find(({password}) => password === passwordIngresado)
+
+        const mensajeIngreso = document.querySelector("#mensajeLogin")
 
         switch (emailIngresado){
             case "admin@gmail.com":
-                if (checkPassword != undefined){
-                    const mensajeIngreso = document.querySelector("#mensajeLogin")
+               /*  if (checkPassword != undefined){
                     mensajeIngreso.innerHTML = "<div><a href='./administrador.html' style='color:white'>Bienvenido ADMINISTRADOR</a></div>"
                 }else{
-                    const mensajeIngreso = document.querySelector("#mensajeLogin")
                     mensajeIngreso.innerText = "Los datos son incorrectos"
-                } 
+                } */
+                checkPassword != undefined ? mensajeIngreso.innerHTML = "<div><a href='./administrador.html' style='color:white'>Bienvenido ADMINISTRADOR</a></div>" : mensajeIngreso.innerText = "Los datos son incorrectos"
                 break;
             default:
-                if (checkPassword != undefined){
-                    const mensajeIngreso = document.querySelector("#mensajeLogin")
+                /* if (checkPassword != undefined){
                     mensajeIngreso.innerText = "Bienvenido"
                 }else{
-                    const mensajeIngreso = document.querySelector("#mensajeLogin")
                     mensajeIngreso.innerText = "Los datos son incorrectos"
-                }
+                } */
+                checkPassword != undefined ? mensajeIngreso.innerText = "Bienvenido" : mensajeIngreso.innerText = "Los datos son incorrectos"
                 break;
         }
     }else{

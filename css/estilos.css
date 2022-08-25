@@ -284,6 +284,9 @@ h1 {
 .contenedorTarjetas {
   height: 80%; }
 
+.contenedorPrecio {
+  display: flex; }
+
 .contenedorTarjetasImpresoras {
   display: flex;
   flex-direction: row;
@@ -535,15 +538,28 @@ h1 {
   align-items: center;
   justify-content: space-between; }
 
-.precioImpresora {
+.precioImpresora1 {
   border: solid 2px black;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   background-color: black;
   align-items: center;
   vertical-align: middle;
   padding: 1%;
   font-family: "Kdam Thmor Pro", sans-serif; }
-  .precioImpresora h2 {
+  .precioImpresora1 h2 {
+    padding: 0; }
+
+.precioImpresora2 {
+  border: solid 2px black;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: black;
+  align-items: center;
+  vertical-align: middle;
+  padding: 1%;
+  font-family: "Kdam Thmor Pro", sans-serif; }
+  .precioImpresora2 h2 {
     padding: 0; }
 
 .videoImpresora {

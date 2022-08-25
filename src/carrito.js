@@ -1,5 +1,4 @@
-const listaCompras = []
-
+let listaCompras = []
 
 class Compra{
     constructor(descripcion, cantidad, precio, subtotal){
@@ -11,10 +10,30 @@ class Compra{
 
     agregarListaCompras(){
         listaCompras.push(new Compra(this.descripcion, this.cantidad, this.precio, this.subtotal))
+        
+        localStorage.setItem("carrito", listaCompras)
     } 
 }
 
-let cantItems = parseInt(prompt("Ingresar cantidad de items a agregar"))
+function armarCarrito(e){
+    e.preventDefault()
+    const listaComprasInicial = []
+    for (let i = 0; i = localStorage.length; i++){  
+        if (localStorage.key = "carrito"){
+            let claveCarrito = localStorage.key(i)
+            
+            listaComprasInicial.push(localStorage.getItem(claveCarrito))
+        }
+    }
+
+    listaCompras = listaComprasInicial
+    const compra = new Compra(descripcion, cantidad, precio, subtotal)
+    compra.agregarListaCompras()
+    localStorage.clear()
+}
+
+
+/* let cantItems = parseInt(prompt("Ingresar cantidad de items a agregar"))
 
 for (let i=0; i<cantItems; i++){
     const descripcion = prompt("Ingrese nombre del item " +(i+1));
@@ -23,11 +42,10 @@ for (let i=0; i<cantItems; i++){
     const subtotal = cantidad * precio
     const compra = new Compra(descripcion, cantidad, precio, subtotal)
     compra.agregarListaCompras()
-}
+} */
 
-console.log(listaCompras)
 
-subtotales = listaCompras.map((el) => el.subtotal)
+let subtotales = listaCompras.map((el) => el.subtotal)
 
 let total = 0
 
@@ -42,5 +60,3 @@ function sumar(subt){
 }
 
 totalizar(subtotales, sumar)
-console.log(total)
-

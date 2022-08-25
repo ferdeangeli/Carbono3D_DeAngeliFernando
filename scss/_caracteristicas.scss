@@ -63,9 +63,10 @@
     justify-content: space-between;
 }
 
-.precioImpresora{
+.precioImpresora1{
     border: solid 2px black;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color: black;
     align-items: center;
     vertical-align: middle;
@@ -75,6 +76,22 @@
         padding: 0;
     }
 }
+
+.precioImpresora2{
+    border: solid 2px black;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    align-items: center;
+    vertical-align: middle;
+    padding: 1%;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    h2{
+        padding: 0;
+    }
+    
+}
+
 
 .videoImpresora{
     display: flex;

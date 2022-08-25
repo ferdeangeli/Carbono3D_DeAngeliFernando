@@ -32,12 +32,12 @@ function crearUsuario(e){
     usuario.agregarListaUsuarios()
 
     const cantidadUsuariosActual = listaUsuarios.length
-    if (cantidadUsuariosActual>cantidadUsuariosInicial){
-        const mensajeRegistro = document.querySelector("#mensajeRegistro")
+    const mensajeRegistro = document.querySelector("#mensajeRegistro")
+    /* if (cantidadUsuariosActual>cantidadUsuariosInicial){
         mensajeRegistro.innerText = "Usuario registrado"
     }else{
-        const mensajeRegistro = document.querySelector("#mensajeRegistro")
         mensajeRegistro.innerText = "Error. Vuelva a intentarlo"
-    }
+    } */
+    cantidadUsuariosActual>cantidadUsuariosInicial ? mensajeRegistro.innerText = "Usuario registrado" : mensajeRegistro.innerText = "Error. Vuelva a intentarlo"
     console.log(listaUsuarios)
 }
