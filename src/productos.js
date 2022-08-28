@@ -1,4 +1,4 @@
-export const listaProductos = [{codigo: 1, descripcion: "Ender 3 V2", color: "negro", categoria: "Impresoras", precio: 53900, stock: 5},
+const listaProductos = [{codigo: 1, descripcion: "Ender 3 V2", color: "negro", categoria: "Impresoras", precio: 53900, stock: 5},
                         {codigo: 2, descripcion: "Magna 2 230", color: "rojo", categoria: "Impresoras", precio: 53900, stock: 6},
                         {codigo: 3, descripcion: "Magna 2 300", color: "rojo", categoria: "Impresoras", precio: 73390, stock: 2},
                         {codigo: 4, descripcion: "Magna SE", color: "naranja", categoria: "Impresoras", precio: 51900, stock: 6},
@@ -7,7 +7,7 @@ export const listaProductos = [{codigo: 1, descripcion: "Ender 3 V2", color: "ne
                         {codigo: 7, descripcion: "GENESIS I", color: "negro", categoria: "Impresoras", precio: 77000, stock: 2},
                         {codigo: 8, descripcion: "Halot One", color: "rojo", categoria: "Impresoras", precio: 57999, stock: 1}]
 
-export class Producto{
+class Producto{
     constructor(codigo, descripcion, color, categoria, precio, stock){
         this.codigo = Number(codigo);
         this.descripcion = descripcion;
