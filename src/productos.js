@@ -1,6 +1,13 @@
-const listaProductos = []
+export const listaProductos = [{codigo: 1, descripcion: "Ender 3 V2", color: "negro", categoria: "Impresoras", precio: 53900, stock: 5},
+                        {codigo: 2, descripcion: "Magna 2 230", color: "rojo", categoria: "Impresoras", precio: 53900, stock: 6},
+                        {codigo: 3, descripcion: "Magna 2 300", color: "rojo", categoria: "Impresoras", precio: 73390, stock: 2},
+                        {codigo: 4, descripcion: "Magna SE", color: "naranja", categoria: "Impresoras", precio: 51900, stock: 6},
+                        {codigo: 5, descripcion: "Hidra 220", color: "verde", categoria: "Impresoras", precio: 79900, stock: 2},
+                        {codigo: 6, descripcion: "Hidra plus", color: "verde", categoria: "Impresoras", precio: 100690, stock: 3},
+                        {codigo: 7, descripcion: "GENESIS I", color: "negro", categoria: "Impresoras", precio: 77000, stock: 2},
+                        {codigo: 8, descripcion: "Halot One", color: "rojo", categoria: "Impresoras", precio: 57999, stock: 1}]
 
-class Producto{
+export class Producto{
     constructor(codigo, descripcion, color, categoria, precio, stock){
         this.codigo = Number(codigo);
         this.descripcion = descripcion;
@@ -44,14 +51,28 @@ function crearProducto(e){
 
     const cantidadProductossActual = listaProductos.length
     const mensajeProducto = document.querySelector("#mensajeProducto")
-    /* if (cantidadProductossActual>cantidadProductosInicial){
-        mensajeProducto.innerText = "Producto creado exitosamente"
+    if (cantidadProductossActual>cantidadProductosInicial){
+        Toastify({
+            text: "Producto creado exitosamente",
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: 'linear-gradient(to right, #00b09b, #96c92d)'
+            }
+        }).showToast()
     }else{
-        mensajeProducto.innerText = "Error. Vuelva a intentarlo"
-    } */
+        Toastify({
+            text: "Error, vuelva a intentarlo",
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: 'linear-gradient(to right, #F55937, #E19E3E)'
+            }
+        }).showToast()
+    }
 
-    cantidadProductossActual>cantidadProductosInicial ? mensajeProducto.innerText = "Producto creado exitosamente" : mensajeProducto.innerText = "Error. Vuelva a intentarlo"
     console.log(listaProductos)
-
 }
 

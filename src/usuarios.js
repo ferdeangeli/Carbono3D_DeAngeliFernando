@@ -33,11 +33,26 @@ function crearUsuario(e){
 
     const cantidadUsuariosActual = listaUsuarios.length
     const mensajeRegistro = document.querySelector("#mensajeRegistro")
-    /* if (cantidadUsuariosActual>cantidadUsuariosInicial){
-        mensajeRegistro.innerText = "Usuario registrado"
+    if (cantidadUsuariosActual>cantidadUsuariosInicial){
+        Toastify({
+            text: "Usuario registrado",
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: 'linear-gradient(to right, #00b09b, #96c92d)'
+            }
+        }).showToast()
     }else{
-        mensajeRegistro.innerText = "Error. Vuelva a intentarlo"
-    } */
-    cantidadUsuariosActual>cantidadUsuariosInicial ? mensajeRegistro.innerText = "Usuario registrado" : mensajeRegistro.innerText = "Error. Vuelva a intentarlo"
+        Toastify({
+            text: "Error, vuelva a intentarlo",
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: 'linear-gradient(to right, #F55937, #E19E3E)'
+            }
+        }).showToast()
+    }
     console.log(listaUsuarios)
 }

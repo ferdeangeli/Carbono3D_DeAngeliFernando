@@ -23,20 +23,51 @@ function login(e){
 
         switch (emailIngresado){
             case "admin@gmail.com":
-               /*  if (checkPassword != undefined){
-                    mensajeIngreso.innerHTML = "<div><a href='./administrador.html' style='color:white'>Bienvenido ADMINISTRADOR</a></div>"
+                if (checkPassword != undefined){
+                    mensajeIngreso.innerHTML = "<div><a href='./administrador.html' style='color:white'>PORTAL DE ADMINISTRADOR</a></div>"
+                    Toastify({
+                        text: "Bienvenido Administrador",
+                        duration: 3000,
+                        gravity: "bottom",
+                        position: "center",
+                        style: {
+                            background: 'linear-gradient(to right, #00b09b, #96c92d)'
+                        }
+                    }).showToast()
                 }else{
-                    mensajeIngreso.innerText = "Los datos son incorrectos"
-                } */
-                checkPassword != undefined ? mensajeIngreso.innerHTML = "<div><a href='./administrador.html' style='color:white'>Bienvenido ADMINISTRADOR</a></div>" : mensajeIngreso.innerText = "Los datos son incorrectos"
+                    Toastify({
+                        text: "Los datos son incorrectos, vuelva a intentarlo",
+                        duration: 3000,
+                        gravity: "bottom",
+                        position: "center",
+                        style: {
+                            background: 'linear-gradient(to right, #F55937, #E19E3E)'
+                        }
+                    }).showToast()
+                }
                 break;
             default:
-                /* if (checkPassword != undefined){
-                    mensajeIngreso.innerText = "Bienvenido"
+                if (checkPassword != undefined){
+                    Toastify({
+                        text: "Bienvenido",
+                        duration: 3000,
+                        gravity: "bottom",
+                        position: "center",
+                        style: {
+                            background: 'linear-gradient(to right, #00b09b, #96c92d)'
+                        }
+                    }).showToast()
                 }else{
-                    mensajeIngreso.innerText = "Los datos son incorrectos"
-                } */
-                checkPassword != undefined ? mensajeIngreso.innerText = "Bienvenido" : mensajeIngreso.innerText = "Los datos son incorrectos"
+                    Toastify({
+                        text: "Los datos son incorrectos, vuelva a intentarlo",
+                        duration: 3000,
+                        gravity: "bottom",
+                        position: "center",
+                        style: {
+                            background: 'linear-gradient(to right, #F55937, #E19E3E)'
+                        }
+                    }).showToast()
+                }
                 break;
         }
     }else{
