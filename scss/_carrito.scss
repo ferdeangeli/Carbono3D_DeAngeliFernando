@@ -1,0 +1,49 @@
+.listaCarrito{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    h2{
+        color: white;
+        text-align: center;
+    }
+
+    .contenedorTabla{
+        display: flex;
+        justify-content: center;
+    }
+
+    table{
+        width: 60%;
+    }
+
+    .finalizarCompra{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.totalCarrito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    gap: 5px;
+    color: white;
+    
+    h6{
+        font-size: 20px;
+    }
+    
+}
+
+.actualizarCantidadCarrito{
+    width: 60px;
+}
+
+.botonEliminarCarrito{
+    background:none;
+    border: none;
+}

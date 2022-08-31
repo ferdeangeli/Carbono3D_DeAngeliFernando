@@ -578,6 +578,41 @@ h1 {
 .linkCrearCuenta:hover {
   color: white; }
 
+.listaCarrito {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .listaCarrito h2 {
+    color: white;
+    text-align: center; }
+  .listaCarrito .contenedorTabla {
+    display: flex;
+    justify-content: center; }
+  .listaCarrito table {
+    width: 60%; }
+  .listaCarrito .finalizarCompra {
+    display: flex;
+    justify-content: space-around; }
+
+.totalCarrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: right;
+  gap: 5px;
+  color: white; }
+  .totalCarrito h6 {
+    font-size: 20px; }
+
+.actualizarCantidadCarrito {
+  width: 60px; }
+
+.botonEliminarCarrito {
+  background: none;
+  border: none; }
+
 * {
   margin: 0;
   padding: 0;
