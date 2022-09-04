@@ -4,6 +4,33 @@
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
+    @media screen and (max-width: 450px){
+        font-size: 10px;
+    }
+
+    .tarjetaItem{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+        div{
+            width: 175px;
+            
+        }
+        .actualizarCarrito{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .botonActualizarCantidad{
+            background: none;
+            border: none;
+        }
+        .precioSubtotal{
+            display: flex;
+            flex-direction: column;
+        }
+    }    
 
     h2{
         color: white;
@@ -13,10 +40,6 @@
     .contenedorTabla{
         display: flex;
         justify-content: center;
-    }
-
-    table{
-        width: 60%;
     }
 
     .finalizarCompra{

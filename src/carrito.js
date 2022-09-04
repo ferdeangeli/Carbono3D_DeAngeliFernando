@@ -13,6 +13,16 @@ function agregarCarrito(e){
 
     if (cantidad > 0){
         listaCompras.push({descripcion, cantidad, precio, subtotal});
+
+        Toastify({
+            text: "El producto fue agregado al carrito",
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: 'linear-gradient(to right, #00b09b, #96c92d)'
+            }
+        }).showToast()
     }else{
         Toastify({
             text: "Ingrese cantidad requerida",
@@ -30,9 +40,3 @@ function agregarCarrito(e){
 
 }
 
-let listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
-let subtotales = listaCompras.map((el) => el.subtotal)
-subtotales.forEach(subtotal => {
-    total =+ subtotal
-})
-document.setItem("#totalCarrito").textContent = total

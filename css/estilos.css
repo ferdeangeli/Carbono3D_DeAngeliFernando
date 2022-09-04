@@ -584,14 +584,32 @@ h1 {
   flex-direction: column;
   padding-left: 10px;
   padding-right: 10px; }
+  @media screen and (max-width: 450px) {
+    .listaCarrito {
+      font-size: 10px; } }
+  .listaCarrito .tarjetaItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px; }
+    .listaCarrito .tarjetaItem div {
+      width: 175px; }
+    .listaCarrito .tarjetaItem .actualizarCarrito {
+      display: flex;
+      justify-content: center;
+      gap: 10px; }
+    .listaCarrito .tarjetaItem .botonActualizarCantidad {
+      background: none;
+      border: none; }
+    .listaCarrito .tarjetaItem .precioSubtotal {
+      display: flex;
+      flex-direction: column; }
   .listaCarrito h2 {
     color: white;
     text-align: center; }
   .listaCarrito .contenedorTabla {
     display: flex;
     justify-content: center; }
-  .listaCarrito table {
-    width: 60%; }
   .listaCarrito .finalizarCompra {
     display: flex;
     justify-content: space-around; }
