@@ -12,6 +12,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        border: solid 1px;
         border-radius: 10px;
         div{
             width: 175px;
@@ -45,6 +46,7 @@
     .finalizarCompra{
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 }
 
@@ -58,6 +60,16 @@
     
     h6{
         font-size: 20px;
+        margin: 0px;        
+        color: white;
+    }
+    
+}
+
+#botonComprar{
+    a{
+        text-decoration: none;
+        color: black;
     }
     
 }

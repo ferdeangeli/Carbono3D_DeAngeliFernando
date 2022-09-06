@@ -9,6 +9,9 @@
     <title>Pagos</title>
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 
+    <!-- CSS Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
+
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     
@@ -71,7 +74,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="./contacto.html">Contacto</a>
               </li>
-              </li>
+<!--                           <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -80,6 +93,19 @@
           </div>
         </div>
     </nav>
+
+<!--             <section class="cabeceraInferior bg-white">
+      <div class="cabeceraInferiorUbicacion">
+        <a href="./paginas/contacto.html" target="_blank"><img src="./assets/img/globo ubicacion.png" alt="globo"></a>
+      </div>
+      
+      <div class="cabeceraInferiorRedes">
+          <a href="https://www.instagram.com/carbono.3d/?hl=es-la" target="_blank"><img src="./assets/img/logo instagram.png" alt="logoinstag"></a>
+      </div>
+      <div class="cabeceraInferiorRedes">
+        <a href="https://www.facebook.com/Carbono3d-1160041694135125" target="_blank"><img src="./assets/img/Logo facebook.png" alt="logoface"></a>
+    </div>
+</section> -->
   </header>
 
    <main class="container-fluid" style="background-image: url(../assets/img/Fondo\ verde.jpg); background-size: cover">
@@ -94,90 +120,71 @@
           </div>
         </div>
         
-          <div class="listaCarrito container-fluid">
-            <h2>Pago de tu compra</h2>
+          
+          <h2 id="tituloPago">Pago de su compra</h2>
+          <br>
+          <div id="listaCarritoPago" class="container-fluid">
 
-            <form class="row">
-              
-              <form action="/process_payment" method="post" id="paymentForm">
-                <h3>Detalles del comprador</h3>
-                  <div>
-                    <div>
-                      <label for="email">E-mail</label>
-                      <input id="email" name="email" type="text" value="test@test.com"/>
-                    </div>
-                    <div>
-                      <label for="docType">Tipo de documento</label>
-                      <select id="docType" name="docType" data-checkout="docType" type="text"></select>
-                    </div>
-                    <div>
-                      <label for="docNumber">Número de documento</label>
-                      <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text"/>
-                    </div>
-                  </div>
-                <h3>Detalles de la tarjeta</h3>
-                  <div>
-                    <div>
-                      <label for="cardholderName">Titular de la tarjeta</label>
-                      <input id="cardholderName" data-checkout="cardholderName" type="text">
-                    </div>
-                    <div>
-                      <label for="">Fecha de vencimiento</label>
-                      <div>
-                        <input type="text" placeholder="MM" id="cardExpirationMonth" data-checkout="cardExpirationMonth"
-                          onselectstart="return false" onpaste="return false"
-                          oncopy="return false" oncut="return false"
-                          ondrag="return false" ondrop="return false" autocomplete=off>
-                        <span class="date-separator">/</span>
-                        <input type="text" placeholder="YY" id="cardExpirationYear" data-checkout="cardExpirationYear"
-                          onselectstart="return false" onpaste="return false"
-                          oncopy="return false" oncut="return false"
-                          ondrag="return false" ondrop="return false" autocomplete=off>
-                      </div>
-                    </div>
-                    <div>
-                      <label for="cardNumber">Número de la tarjeta</label>
-                      <input type="text" id="cardNumber" data-checkout="cardNumber"
-                        onselectstart="return false" onpaste="return false"
-                        oncopy="return false" oncut="return false"
-                        ondrag="return false" ondrop="return false" autocomplete=off>
-                    </div>
-                    <div>
-                      <label for="securityCode">Código de seguridad</label>
-                      <input id="securityCode" data-checkout="securityCode" type="text"
-                        onselectstart="return false" onpaste="return false"
-                        oncopy="return false" oncut="return false"
-                        ondrag="return false" ondrop="return false" autocomplete=off>
-                    </div>
-                    <div id="issuerInput">
-                      <label for="issuer">Banco emisor</label>
-                      <select id="issuer" name="issuer" data-checkout="issuer"></select>
-                    </div>
-                    <div>
-                      <label for="installments">Cuotas</label>
-                      <select type="text" id="installments" name="installments"></select>
-                    </div>
-                    <div>
-                      <input type="hidden" name="transactionAmount" id="transactionAmount" value="100" />
-                      <input type="hidden" name="paymentMethodId" id="paymentMethodId" />
-                      <input type="hidden" name="description" id="description" />
-                      <br>
-                      <button type="submit">Pagar</button>
-                      <br>
-                    </div>
-                </div>
-              </form>
-
-              <div class="finalizarCompra">  
-                <button id="botonComprar" type="submit" class="btn btn-light">Finalizar compra</button>
+              <div id="listaItemsPago">
+                <h5>Listado de compra</h5>
                 <div class="totalCarrito">
                   <h6>Total:</h6>
                   <h6 id="totalCarrito">  </h6>
                 </div>
+
               </div>
-            </form>
+              <div id="totalLista">
+
+
+              </div>
+
+              <div id="formaPago">
+                <div id="transferencia" class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="opcionTransferencia">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Transferencia bancaria
+                  </label>
+                  <ul>
+                    <li>CBU: 2134451237561232</li>
+                    <li>Cuenta: 21-51235/23</li>
+                    <li>Banco: Superbank</li>
+                    <li>Titular: Carbono S.A.</li>
+                  </ul>
+                  <div class="finalizarCompra"> 
+                    <label for="adjuntarComprobante">Adjuntar Comprobante</label>
+                    <input id="adjuntarComprobante" type="file" name="Adjuntar comprobante"></input>
+                  </div>
+                </div>
+
+                <div id="tarjeta" class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="opcionTarjeta">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Tarjeta de Crédito
+                  </label>
+                  <div><input class="inputTarjeta" type="number"> / <input class="inputTarjeta" type="number"> / <input class="inputTarjeta" type="number"> / <input class="inputTarjeta" type="number"></div>
+                  <br>
+                  <div>
+                    <input class="inputVencimiento" type="number" name="mes" placeholder="Mes"> / <input class="inputVencimiento" type="number" name="año" placeholder="Año">
+                  </div>
+                  <br>
+                  <div>
+                    <input class="inputSeguridad" type="number" placeholder="Cod.">
+                  </div>
+                  <br>
+                  <div class="finalizarCompra"> 
+                    <button id="botonPagar" type="submit" class="btn btn-light">Pagar</button>
+                  </div>
+                </div>
+
+                <br>
+
+                
+              </div>
+              
+              
           </div>
-         
+          <br>
+          
        </section>
 
     <br>
@@ -213,9 +220,7 @@
     </div>
   </footer>
 
-<script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-
-<script src="../src/carritofinal.js"></script>
+<script src="../src/carritopagar.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

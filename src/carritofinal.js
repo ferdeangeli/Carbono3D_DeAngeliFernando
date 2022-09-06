@@ -1,7 +1,4 @@
-
-
 //Aca arma la tabla del carrito fila por fila
-
 
 tablaCarrito()
 
@@ -29,8 +26,8 @@ function tablaCarrito (){
                                 <div>Precio: $${item.precio}</div>
                                 <div>Subtotal: $${item.subtotal}</div>
                             </div>
-                        </div> 
-                        <br>
+                        </div>
+                        <br> 
                         
                         <script>
                             const botonActualizarCantidad${num}= document.querySelector("#actualizarCantidad${num}")
@@ -88,21 +85,28 @@ function tablaCarrito (){
         montoTotal.innerText = "$" + total
     }
 
-
-   }
-
-
-
-//Checkout
-
-const finalizarCompra = (e) => {
-    e.preventDefault()
-    swal("¡Muchas gracias por su Compra!", "Enviaremos su factura por email", "success")
-    localStorage.removeItem("carrito")
+    //Finalizar compra
+    console.log(listaCompras)
+    const botonComprar = document.querySelector("#botonComprar")
+    if (listaCompras.length!=0){
+        botonComprar.innerHTML = `<a href="./pago.html">Finalizar compra</a>`
+    }else{
+        botonComprar.addEventListener("click", (e) => {
+            e.preventDefault()
+            Toastify({
+                text: "El carrito se encuentra vacío. Por favor, agregue los productos deseados",
+                duration: 3000,
+                gravity: "bottom",
+                position: "center",
+                style: {
+                    background: 'linear-gradient(to right, #F55937, #E19E3E)'
+                }
+            }).showToast()
+        })
+        
+    }
 }
 
-botonComprar = document.querySelector("#botonComprar")
-botonComprar.addEventListener("click", finalizarCompra)
 
 //Vaciar carrito
 

@@ -591,6 +591,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: solid 1px;
     border-radius: 10px; }
     .listaCarrito .tarjetaItem div {
       width: 175px; }
@@ -612,7 +613,8 @@ h1 {
     justify-content: center; }
   .listaCarrito .finalizarCompra {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: center; }
 
 .totalCarrito {
   display: flex;
@@ -622,7 +624,13 @@ h1 {
   gap: 5px;
   color: white; }
   .totalCarrito h6 {
-    font-size: 20px; }
+    font-size: 20px;
+    margin: 0px;
+    color: white; }
+
+#botonComprar a {
+  text-decoration: none;
+  color: black; }
 
 .actualizarCantidadCarrito {
   width: 60px; }
@@ -630,6 +638,82 @@ h1 {
 .botonEliminarCarrito {
   background: none;
   border: none; }
+
+#tituloPago {
+  display: flex;
+  justify-content: center;
+  color: white; }
+
+#listaCarritoPago {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: center;
+  gap: 20px;
+  padding: 1px; }
+  @media screen and (max-width: 450px) {
+    #listaCarritoPago {
+      font-size: 10px; } }
+  #listaCarritoPago #listaItemsPago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 15px;
+    margin: 0%;
+    padding: 1%; }
+  #listaCarritoPago .tarjetaItemPago {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px;
+    color: black;
+    margin: 0%;
+    padding: 0%; }
+    #listaCarritoPago .tarjetaItemPago div {
+      width: 200px; }
+    #listaCarritoPago .tarjetaItemPago .precioSubtotalPago {
+      display: flex;
+      flex-direction: column; }
+  #listaCarritoPago #formaPago {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: left;
+    vertical-align: center; }
+  #listaCarritoPago #transferencia, #listaCarritoPago #tarjeta {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 35px; }
+  #listaCarritoPago .inputTarjeta {
+    width: 60px; }
+  #listaCarritoPago .inputVencimiento {
+    width: 60px; }
+  #listaCarritoPago .inputSeguridad {
+    width: 60px; }
+  #listaCarritoPago h2 {
+    color: white;
+    text-align: center; }
+  #listaCarritoPago .contenedorTabla {
+    display: flex;
+    justify-content: center; }
+  #listaCarritoPago .finalizarCompra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+
+.totalCarrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: right;
+  gap: 5px;
+  color: black; }
+  .totalCarrito h6 {
+    font-size: 20px; }
 
 * {
   margin: 0;

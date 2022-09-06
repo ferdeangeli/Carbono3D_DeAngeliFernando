@@ -1,0 +1,108 @@
+#tituloPago{
+    display: flex;
+    justify-content: center;
+    color: white;
+
+}
+
+#listaCarritoPago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    vertical-align: center;
+    gap: 20px;
+    padding: 1px; 
+    @media screen and (max-width: 450px){
+        font-size: 10px;
+    }
+
+    #listaItemsPago{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white; opacity: 80%;
+        border-radius: 15px;
+        margin: 0%;
+        padding: 1%;
+    }
+
+    .tarjetaItemPago{
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px; color: black;
+        margin: 0%;
+        padding: 0%;
+        div{
+            width: 200px;
+            
+        }
+        .precioSubtotalPago{
+            display: flex;
+            flex-direction: column;
+        }
+    }    
+
+    #formaPago{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: left;
+        vertical-align: center;
+    }
+
+    #transferencia{
+        border: solid 1px;
+        border-radius: 10px;
+        padding: 10px;
+        padding-left: 35px;
+    }
+
+    #tarjeta{
+        @extend #transferencia
+    }
+
+    .inputTarjeta{
+        width: 60px;
+    }
+    
+    .inputVencimiento{
+        width: 60px;
+    }
+
+    .inputSeguridad{
+        width: 60px;
+    }
+
+    h2{
+        color: white;
+        text-align: center;
+    }
+
+    .contenedorTabla{
+        display: flex;
+        justify-content: center;
+    }
+
+    .finalizarCompra{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+.totalCarrito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    gap: 5px;
+    color: black;
+    
+    h6{
+        font-size: 20px;
+    }
+    
+}
+
