@@ -27,42 +27,40 @@ function tablaCarrito (){
                                 <div>Subtotal: $${item.subtotal}</div>
                             </div>
                         </div>
-                        <br> 
-                        
-                        <script>
-                            const botonActualizarCantidad${num}= document.querySelector("#actualizarCantidad${num}")
-                            botonActualizarCantidad${num}.addEventListener("click", modificarCantidad)
+                        <br>`
 
-                            function modificarCantidad${num}(e){
-                                let nuevaCantidad = parseInt(document.querySelector("#cantidad${num}").value)
-                                let listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
-                                localStorage.removeItem("carrito")
-                    
-                                listaCompras[${num}-1].cantidad = nuevaCantidad
-                                listaCompras[${num}-1].subtotal = nuevaCantidad*listaCompras[${num}-1].precio
-                    
-                                
-                                let listaComprasJSON = JSON.stringify(listaCompras);
-                                localStorage.setItem("carrito", listaComprasJSON);
-                                console.log(listaCompras)
-                            }
-                            
-                            
-                            const botonEliminarItem${num} = document.querySelector("#eliminar${num}")
-                            botonEliminarItem${num}.addEventListener("click", eliminarItem${num})
-
-                            function eliminarItem${num}(e){
-                                localStorage.removeItem("carrito")
-                                listaCompras.splice(${num}-1,1)
-
-                                let listaComprasJSON = JSON.stringify(listaCompras);
-                                localStorage.setItem("carrito", listaComprasJSON);
-                            }
-                            
-                        </script>`
-
-        listaItems.appendChild(tarjeta) 
         
+        listaItems.appendChild(tarjeta) 
+
+        const botonActualizarCantidad= document.querySelector(`#actualizarCantidad${num}`)
+        botonActualizarCantidad.addEventListener("click", (e) => {
+            e.preventDefault()
+            let nuevaCantidad = parseInt(document.querySelector(`#cantidad${num}`).value)
+            let listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
+            localStorage.removeItem("carrito")
+
+            const numIndex = parseInt(`${num}`)-1
+            console.log(numIndex)
+                
+            listaCompras[numIndex].cantidad = nuevaCantidad
+            listaCompras[numIndex].subtotal = nuevaCantidad*listaCompras[numIndex].precio
+                
+                            
+            let listaComprasJSON = JSON.stringify(listaCompras);
+            localStorage.setItem("carrito", listaComprasJSON);
+            console.log(listaCompras)
+        })
+                        
+                        
+        const botonEliminarItem = document.querySelector(`#eliminar${num}`)
+        botonEliminarItem.addEventListener("click", () => {
+            localStorage.removeItem("carrito")
+            listaCompras.splice(num-1,1)
+
+            let listaComprasJSON = JSON.stringify(listaCompras);
+            localStorage.setItem("carrito", listaComprasJSON);
+        })     
+                            
 
         //Aca calcula el total de lo que hay en el carrito
 
