@@ -10,9 +10,14 @@ function agregarCarrito(e){
     let cantidad = parseInt(document.querySelector(".cantidadPedido").value)
     const precio = parseFloat(document.querySelector(".precioImpresora2").textContent)
     let subtotal = cantidad * precio
+    let id = listaCompras[listaCompras.length - 1]?.id + 1;
 
+    if (!id){
+        id = 1
+    }
+    
     if (cantidad > 0){
-        listaCompras.push({descripcion, cantidad, precio, subtotal});
+        listaCompras.push({id, descripcion, cantidad, precio, subtotal});
 
         Toastify({
             text: "El producto fue agregado al carrito",

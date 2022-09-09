@@ -1,26 +1,31 @@
 //Aca arma la tabla del carrito fila por fila
 
+const listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
+
 tablaCarrito()
 
 function tablaCarrito (){
-    const listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
+    
     const listaItems = document.querySelector("#listaItems");
+    listaItems.innerHTML = ""
     num = 0
 
     for (const item of listaCompras){
-       
+        
+        console.log(item);
+
         num++
 
         const tarjeta = document.createElement("div");
         tarjeta.innerHTML = 
                         `<div class="tarjetaItem">
-                            <div>
+                            <div id:"${item.id}">
                                 ${num}. ${item.descripcion}
                             </div>
                             <div class="actualizarCarrito">
                                 <input id="cantidad${num}" class="actualizarCantidadCarrito form-control" type="number" value=${item.cantidad}></input>
                                 <button id="actualizarCantidad${num}" class="botonActualizarCantidad"><img src="../assets/img/actualizar.png"></img></button>
-                                <button id="eliminar${num}" class="botonEliminarCarrito"><img src="../assets/img/tachito.png"></img></button>
+                                <button class="botonEliminarCarrito"><img src="../assets/img/tachito.png"></img></button>
                             </div>
                             <div class="precioSubtotal">
                                 <div>Precio: $${item.precio}</div>
@@ -32,36 +37,7 @@ function tablaCarrito (){
         
         listaItems.appendChild(tarjeta) 
 
-        const botonActualizarCantidad= document.querySelector(`#actualizarCantidad${num}`)
-        botonActualizarCantidad.addEventListener("click", (e) => {
-            e.preventDefault()
-            let nuevaCantidad = parseInt(document.querySelector(`#cantidad${num}`).value)
-            let listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
-            localStorage.removeItem("carrito")
-
-            const numIndex = parseInt(`${num}`)-1
-            console.log(numIndex)
-                
-            listaCompras[numIndex].cantidad = nuevaCantidad
-            listaCompras[numIndex].subtotal = nuevaCantidad*listaCompras[numIndex].precio
-                
-                            
-            let listaComprasJSON = JSON.stringify(listaCompras);
-            localStorage.setItem("carrito", listaComprasJSON);
-            console.log(listaCompras)
-        })
-                        
-                        
-        const botonEliminarItem = document.querySelector(`#eliminar${num}`)
-        botonEliminarItem.addEventListener("click", () => {
-            localStorage.removeItem("carrito")
-            listaCompras.splice(num-1,1)
-
-            let listaComprasJSON = JSON.stringify(listaCompras);
-            localStorage.setItem("carrito", listaComprasJSON);
-        })     
-                            
-
+     
         //Aca calcula el total de lo que hay en el carrito
 
         let subtotales = listaCompras.map((el) => el.subtotal)
@@ -103,7 +79,44 @@ function tablaCarrito (){
         })
         
     }
+
+    
+
 }
+
+/* const botonActualizarCantidad= document.querySelector(`#actualizarCantidad${num}`)
+botonActualizarCantidad.addEventListener("click", (e) => {
+    e.preventDefault()
+    let nuevaCantidad = parseInt(document.querySelector(`#cantidad${num}`).value)
+    let listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
+    localStorage.removeItem("carrito")
+
+    const numIndex = parseInt(`${num}`)-1
+    console.log(numIndex)
+        
+    listaCompras[numIndex].cantidad = nuevaCantidad
+    listaCompras[numIndex].subtotal = nuevaCantidad*listaCompras[numIndex].precio
+        
+                    
+    let listaComprasJSON = JSON.stringify(listaCompras);
+    localStorage.setItem("carrito", listaComprasJSON);
+    console.log(listaCompras)
+})
+    */             
+             
+
+
+document.querySelectorAll(".botonEliminarCarrito").forEach(elemento => {
+    elemento.addEventListener("click", (e) => {
+        const id = e.target.parentNode.parentNode.parentNode.children[0].id;
+        const index = listaCompras.findIndex(producto => producto.id === Number(id))
+        listaCompras.splice(index, 1)
+    
+        let listaComprasJSON = JSON.stringify(listaCompras);
+        localStorage.setItem("carrito", listaComprasJSON);
+    })
+})
+
 
 
 //Vaciar carrito
