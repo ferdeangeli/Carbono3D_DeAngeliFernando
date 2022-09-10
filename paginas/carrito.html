@@ -30,7 +30,12 @@
         </div>
 
         <div class="cabeceraSuperior2">
-          <button type="button" class="btn btn-white"><a class="linkLogin" href="./login.html">LOGIN</a></button>
+          <li class="nav-item dropdown" style="display:flex; list-style: none; align-items: center">
+            <a class="linkLogin nav-link dropdown-toggle" href="./login.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">LOGIN</a>
+            <ul class="menuSesion dropdown-menu" aria-labelledby="navbarDropdown">
+
+            </ul>
+          </li>
           <button type="button" class="btn btn-white"><a href="./carrito.html"><img src="../assets/img/carrito de compras.png" alt="carrito"></a></button>
         </div>
     </div>
@@ -176,7 +181,7 @@
   </footer>
 
 <script src="../src/carritofinal.js"></script>
-
+<script src="../src/chequeoSesion.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
