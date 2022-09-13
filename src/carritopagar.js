@@ -58,9 +58,9 @@ botonPagar.addEventListener("click", (e) => {
     e.preventDefault()
 
     const opcionTarjeta = document.querySelector("#opcionTarjeta")
-    const inputTarjeta = parseInt(document.querySelector(".inputTarjeta").value)
-    const inputVencimiento = parseInt(document.querySelector(".inputVencimiento").value)
-    const inputSeguridad = parseInt(document.querySelector(".inputSeguridad").value)
+    const inputTarjeta = parseInt(document.querySelector(".inputTarjeta").value) || ""
+    const inputVencimiento = parseInt(document.querySelector(".inputVencimiento").value) || ""
+    const inputSeguridad = parseInt(document.querySelector(".inputSeguridad").value) || ""
 
     console.log(inputTarjeta)
     console.log(inputVencimiento)
@@ -75,6 +75,11 @@ botonPagar.addEventListener("click", (e) => {
     }
     
 })
+
+
+//pago con transferencia
+
+
 
 //Opciones de pago
 

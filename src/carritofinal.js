@@ -19,12 +19,12 @@ function tablaCarrito (){
         const tarjeta = document.createElement("div");
         tarjeta.innerHTML = 
                         `<div class="tarjetaItem">
-                            <div id:"${item.id}">
+                            <div id="${item.id}">
                                 ${num}. ${item.descripcion}
                             </div>
                             <div class="actualizarCarrito">
-                                <input id="cantidad${num}" class="actualizarCantidadCarrito form-control" type="number" value=${item.cantidad}></input>
-                                <button id="actualizarCantidad${num}" class="botonActualizarCantidad"><img src="../assets/img/actualizar.png"></img></button>
+                                <input class="actualizarCantidadCarrito form-control" type="number" value=${item.cantidad}></input>
+                                <button class="botonActualizarCantidad"><img src="../assets/img/actualizar.png"></img></button>
                                 <button class="botonEliminarCarrito"><img src="../assets/img/tachito.png"></img></button>
                             </div>
                             <div class="precioSubtotal">
@@ -84,30 +84,35 @@ function tablaCarrito (){
 
 }
 
-/* const botonActualizarCantidad= document.querySelector(`#actualizarCantidad${num}`)
-botonActualizarCantidad.addEventListener("click", (e) => {
-    e.preventDefault()
-    let nuevaCantidad = parseInt(document.querySelector(`#cantidad${num}`).value)
-    let listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
-    localStorage.removeItem("carrito")
+//funcion modificar cantidad de item de carrito
 
-    const numIndex = parseInt(`${num}`)-1
-    console.log(numIndex)
-        
-    listaCompras[numIndex].cantidad = nuevaCantidad
-    listaCompras[numIndex].subtotal = nuevaCantidad*listaCompras[numIndex].precio
-        
-                    
-    let listaComprasJSON = JSON.stringify(listaCompras);
-    localStorage.setItem("carrito", listaComprasJSON);
-    console.log(listaCompras)
+document.querySelectorAll(".actualizarCantidadCarrito").forEach(elemento => {
+    elemento.addEventListener("click", (e) => {
+        const nuevaCantidad = parseInt(e.target.value)
+
+        document.querySelectorAll(".botonActualizarCantidad").forEach(elemento => {
+            elemento.addEventListener("click", (e) => {
+                const listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
+                const id = e.target.parentNode.parentNode.parentNode.children[0].id;
+                const index = listaCompras.findIndex(producto => producto.id === Number(id))
+                listaCompras[index].cantidad = nuevaCantidad
+
+                const nuevoSubtotal = listaCompras[index].precio * nuevaCantidad
+                listaCompras[index].subtotal = nuevoSubtotal
+
+                let listaComprasJSON = JSON.stringify(listaCompras);
+                localStorage.setItem("carrito", listaComprasJSON);
+
+            })
+        })    
+    })
 })
-    */             
-             
 
+//funcion eliminar item del carrito
 
 document.querySelectorAll(".botonEliminarCarrito").forEach(elemento => {
     elemento.addEventListener("click", (e) => {
+        const listaCompras = JSON.parse(localStorage.getItem("carrito")) || []
         const id = e.target.parentNode.parentNode.parentNode.children[0].id;
         const index = listaCompras.findIndex(producto => producto.id === Number(id))
         listaCompras.splice(index, 1)
