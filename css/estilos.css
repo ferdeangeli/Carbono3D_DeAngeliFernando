@@ -683,6 +683,9 @@ h1 {
     flex-direction: column;
     justify-content: left;
     vertical-align: center; }
+    #listaCarritoPago #formaPago #botonEnviarComprobante {
+      width: 50%;
+      border-radius: 5px; }
   #listaCarritoPago #transferencia, #listaCarritoPago #tarjeta {
     border: solid 1px;
     border-radius: 10px;

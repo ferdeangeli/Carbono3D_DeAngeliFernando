@@ -51,7 +51,7 @@ function tablaCarrito (){
     montoTotal.innerText = "$" + total    
    }
 
-//Checkout
+//Checkout con tarjeta de credito
 
 botonPagar = document.querySelector("#botonPagar")
 botonPagar.addEventListener("click", (e) => {
@@ -77,9 +77,17 @@ botonPagar.addEventListener("click", (e) => {
 })
 
 
-//pago con transferencia
+//Checkout pago con transferencia
 
+const botonPagarTransferencia = document.querySelector("#botonEnviarComprobante")
+botonPagarTransferencia.addEventListener("click", (e) => {
+    if(opcionTransferencia.checked){
+        swal("¡Muchas gracias por su Compra!", "Enviaremos su factura por email", "success")
+        localStorage.removeItem("carrito")
+    }else{
+        swal("Por favor seleccione una opción", "Seleccione pago con Tarjeta y complete los datos requeridos", "error")
+    }
+    
+})
 
-
-//Opciones de pago
 

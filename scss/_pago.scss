@@ -50,6 +50,11 @@
         flex-direction: column;
         justify-content: left;
         vertical-align: center;
+
+        #botonEnviarComprobante{
+            width: 50%;
+            border-radius: 5px;
+        }
     }
 
     #transferencia{

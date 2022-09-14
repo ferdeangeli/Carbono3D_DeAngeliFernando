@@ -33,14 +33,9 @@ if (sesionActiva != undefined){
         botonMisDatos.addEventListener("click", (e) => {
             e.preventDefault()
             if (window.location.href.includes("index.html")){
-                if(sesionActiva === "ADMIN"){
                     window.location.href = "./paginas/misDatos.html"
-                }
-    
             }else{
-                if(sesionActiva === "ADMIN"){
                     window.location.href = "./misDatos.html"
-                }
             }
             
         })
@@ -54,7 +49,8 @@ if (sesionActiva != undefined){
                     window.location.href = "./misCompras.html"
                 }
         })
-    }    
+    } 
+       
 }else{
     menuSesion.innerHTML = '<li><a class="iniciarSesion dropdown-item" href="">Iniciar Sesión</a></li>'
     const botonIniciarSesion = document.querySelector(".iniciarSesion")
