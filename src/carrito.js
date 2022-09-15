@@ -44,4 +44,3 @@ function agregarCarrito(e){
     console.log(listaCompras)
 
 }
-
